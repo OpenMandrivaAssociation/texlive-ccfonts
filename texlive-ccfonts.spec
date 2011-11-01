@@ -1,0 +1,58 @@
+Name:		texlive-ccfonts
+Version:	1.1
+Release:	1
+Summary:	Support for Concrete text and math fonts in LaTeX
+Group:		Publishing
+URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/ccfonts
+License:	LPPL
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ccfonts.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ccfonts.doc.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ccfonts.source.tar.xz
+BuildArch:	noarch
+BuildRequires:	texlive-tlpkg
+Requires(post):	texlive-tlpkg
+Conflicts:	texlive-texmf <= 20110705-3
+Conflicts:	texlive-doc <= 20110705-3
+Conflicts:	texlive-source <= 20110705-3
+
+%description
+LaTeX font definition files for the Concrete fonts and a LaTeX
+package for typesetting documents using Concrete as the default
+font family. The files support OT1, T1, TS1, and Concrete
+mathematics including AMS fonts (Ulrik Vieth's concmath).
+
+%pre
+    %_texmf_mktexlsr_pre
+
+%post
+    %_texmf_mktexlsr_post
+
+%preun
+    %_texmf_mktexlsr_preun
+
+%postun
+    if [ $1 -eq 0 ]; then
+	%_texmf_mltexlsr_post
+    fi
+
+#-----------------------------------------------------------------------
+%files
+%{_texmfdistdir}/tex/latex/ccfonts/ccfonts.sty
+%{_texmfdistdir}/tex/latex/ccfonts/t1ccr.fd
+%{_texmfdistdir}/tex/latex/ccfonts/ts1ccr.fd
+%doc %{_texmfdistdir}/doc/latex/ccfonts/ccfonts.pdf
+%doc %{_texmfdistdir}/doc/latex/ccfonts/readme
+#- source
+%doc %{_texmfdistdir}/source/latex/ccfonts/cc.fdd
+%doc %{_texmfdistdir}/source/latex/ccfonts/ccfonts.dtx
+%doc %{_texmfdistdir}/source/latex/ccfonts/ccfonts.ins
+
+#-----------------------------------------------------------------------
+%prep
+%setup -c -a0 -a1 -a2
+
+%build
+
+%install
+mkdir -p %{buildroot}%{_texmfdistdir}
+cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
