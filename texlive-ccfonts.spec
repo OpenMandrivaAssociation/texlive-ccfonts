@@ -1,3 +1,9 @@
+# revision 17122
+# category Package
+# catalog-ctan /macros/latex/contrib/ccfonts
+# catalog-date 2010-02-21 01:29:55 +0100
+# catalog-license lppl
+# catalog-version 1.1
 Name:		texlive-ccfonts
 Version:	1.1
 Release:	1
@@ -48,6 +54,7 @@ mathematics including AMS fonts (Ulrik Vieth's concmath).
 %doc %{_texmfdistdir}/source/latex/ccfonts/cc.fdd
 %doc %{_texmfdistdir}/source/latex/ccfonts/ccfonts.dtx
 %doc %{_texmfdistdir}/source/latex/ccfonts/ccfonts.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,3 +65,5 @@ mathematics including AMS fonts (Ulrik Vieth's concmath).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
