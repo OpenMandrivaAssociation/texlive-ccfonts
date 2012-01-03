@@ -19,6 +19,8 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 
+%define		_unpackaged_subdirs_terminate_build	0
+
 %description
 LaTeX font definition files for the Concrete fonts and a LaTeX
 package for typesetting documents using Concrete as the default
