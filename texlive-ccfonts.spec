@@ -56,3 +56,18 @@ mathematics including AMS fonts (Ulrik Vieth's concmath).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.1-2
++ Revision: 750146
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.1-1
++ Revision: 718018
+- texlive-ccfonts
+- texlive-ccfonts
+- texlive-ccfonts
+- texlive-ccfonts
+- texlive-ccfonts
+
