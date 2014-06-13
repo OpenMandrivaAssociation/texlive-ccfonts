@@ -6,7 +6,7 @@
 # catalog-version 1.1
 Name:		texlive-ccfonts
 Version:	1.1
-Release:	6
+Release:	7
 Summary:	Support for Concrete text and math fonts in LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/ccfonts
