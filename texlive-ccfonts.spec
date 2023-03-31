@@ -1,6 +1,6 @@
 Name:		texlive-ccfonts
 Version:	61431
-Release:	1
+Release:	2
 Summary:	Support for Concrete text and math fonts in LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/ccfonts
