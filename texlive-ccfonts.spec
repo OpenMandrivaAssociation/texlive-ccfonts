@@ -3,7 +3,7 @@ Version:	61431
 Release:	2
 Summary:	Support for Concrete text and math fonts in LaTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/ccfonts
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/ccfonts
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ccfonts.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ccfonts.doc.r%{version}.tar.xz
